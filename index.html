@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b18">
+  <title>Mercado RC | Marketplace Gamer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="rgb-lines"></div>
+
+  <header class="topbar">
+    <a class="logo" id="secretAdminLogo" href="#inicio" aria-label="Mercado RC">
+      <span class="logo-mark">♛</span>
+      <span>MERCADO<span class="logo-rc">RC</span><small>SEU JOGO, NOSSO COMPROMISSO</small></span>
+    </a>
+
+    <nav class="main-nav">
+      <a class="active" href="#inicio">⌂ <span>Início</span></a>
+      <a href="#jogos">▦ <span>Produtos</span></a>
+      <a href="#jogos">🎮 <span>Jogos</span></a>
+      <a href="#ofertas">⚡ <span>Ofertas</span></a>
+      <a href="#sobre">◈ <span>Sobre</span></a>
+    </nav>
+
+    <div class="header-search search-wrap">
+      <span>⌕</span>
+      <input id="searchInput" type="search" placeholder="Buscar por jogos, produtos ou categorias...">
+      <kbd>/</kbd>
+    </div>
+
+    <div class="header-actions">
+      <button id="rgbToggle" class="icon-btn" type="button" title="Modo RGB">✦</button>
+      <button id="notificationBell" class="icon-btn notification-bell" type="button" title="Notificações">🔔<b id="notificationCount">0</b></button>
+      <button id="loginButton" class="account-btn" type="button"><span>◉</span><b>Entrar</b></button>
+      <button id="cartButton" class="cart-btn" type="button">🛒 <b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="side-nav">
+      <div class="side-title">NAVEGAÇÃO</div>
+      <a class="side-link active" href="#inicio">⌂ <span>Início</span></a>
+      <a class="side-link" href="#jogos">▦ <span>Todos os produtos</span></a>
+      <a class="side-link" href="#jogos">🎮 <span>Jogos</span></a>
+      <a class="side-link" href="#ofertas">🎁 <span>Gift Cards</span></a>
+      <a class="side-link" href="#sobre">♙ <span>Contas & Serviços</span></a>
+      <a class="side-link support-link" href="#suporte">💬 <span>Central de suporte</span><b>CHAT</b></a>
+      <a class="side-link" href="#jogos">◇ <span>Produtos físicos</span></a>
+      <a class="side-link hot" href="#ofertas">🔥 <span>Ofertas especiais</span></a>
+      <a class="side-link" href="#pedidos" id="ordersShortcut">☷ <span>Meus pedidos</span></a>
+      <button class="side-link side-button" id="favoritesShortcut" type="button">♡ <span>Meus favoritos</span></button>
+      <div class="side-divider"></div>
+      <button class="discord-card" id="discordCommunityButton" type="button">
+        <strong>♛</strong>
+        <b>ENTRE NA NOSSA<br>COMUNIDADE</b>
+        <span>Fique por dentro das novidades.</span>
+        <em>Discord RC</em>
+      </button>
+      <div class="side-mini">
+        <span>●</span> Loja online <b>24h</b>
+      </div>
+    </aside>
+
+    <main id="inicio" class="main-content">
+      <section class="hero hero-rgb">
+        <div class="hero-grid"></div>
+        <div class="hero-orb orb1"></div><div class="hero-orb orb2"></div><div class="hero-orb orb3"></div>
+        <div class="hero-content">
+          <span class="tag">MERCADO RC • GAMER MARKETPLACE</span>
+          <h1>SEU INVENTÁRIO.<br><strong>SEU UNIVERSO.</strong></h1>
+          <p>Itens, moedas, skins, gift cards e produtos físicos para os seus jogos favoritos em um só lugar.</p>
+          <div class="hero-actions">
+            <a href="#jogos" class="primary">Explorar loja <span>→</span></a>
+            <a href="#ofertas" class="secondary-btn">⚡ Ver ofertas</a>
+          </div>
+          <div class="hero-stats">
+            <span><b>16+</b> produtos</span><span><b>4</b> jogos</span><span><b>24h</b> loja online</span>
+          </div>
+        </div>
+        <div class="hero-showcase">
+          <div class="scanline"></div>
+          <div class="showcase-title">OFERTA IMPERDÍVEL <span>● AO VIVO</span></div>
+          <div class="showcase-character">☠</div>
+          <div class="game-tile tile-gta"><b>GTA V</b><span>SHARK CASH</span></div>
+          <div class="game-tile tile-ff"><b>FREE FIRE</b><span>DIAMANTES</span></div>
+          <div class="game-tile tile-fn"><b>FORTNITE</b><span>V-BUCKS</span></div>
+          <div class="hero-discount"><strong>30%</strong><span>OFF</span></div>
+          <div class="showcase-bar"><span>🔥 PACOTE NEON</span><b>POR TEMPO LIMITADO</b></div>
+        </div>
+      </section>
+
+      <section class="trust">
+        <div>⚡ <span><b>Entrega rápida</b><small>Produtos digitais</small></span></div>
+        <div>🛡️ <span><b>Compra protegida</b><small>Checkout seguro</small></span></div>
+        <div>🎮 <span><b>Vários jogos</b><small>Catálogo gamer</small></span></div>
+        <div>💬 <span><b>Suporte RC</b><small>Estamos por perto</small></span></div>
+      </section>
+
+      <section class="category-strip" id="categorias">
+        <button class="category-card active filter" data-game="Todos"><span>▦</span><b>Todos</b><small>Catálogo</small></button>
+        <button class="category-card filter" data-game="Free Fire"><span>🔥</span><b>Free Fire</b><small>Diamantes</small></button>
+        <button class="category-card filter" data-game="GTA V"><span>🦈</span><b>GTA V</b><small>Cash & mídia</small></button>
+        <button class="category-card filter" data-game="Fortnite"><span>⚡</span><b>Fortnite</b><small>V-Bucks</small></button>
+        <button class="category-card filter" data-game="Steam"><span>◈</span><b>Steam</b><small>Gift Cards</small></button>
+      </section>
+
+      <section id="jogos" class="section catalog-section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">CATÁLOGO GAMER</span>
+            <h2>Produtos em destaque</h2>
+            <p class="section-subtitle">Escolha seu jogo, encontre seu item e adicione ao carrinho.</p>
+          </div>
+          <div class="catalog-tools">
+            <span class="live-dot">● AO VIVO</span>
+            <select id="sortProducts" aria-label="Ordenar produtos">
+              <option value="default">Mais vendidos</option>
+              <option value="price-low">Menor preço</option>
+              <option value="price-high">Maior preço</option>
+            </select>
+          </div>
+        </div>
+        <div id="products" class="products"></div>
+      </section>
+
+      <section id="ofertas" class="promo promo-rgb">
+        <div>
+          <span class="eyebrow">MERCADO RC+</span>
+          <h2>Itens selecionados.<br><strong>Preço de jogador.</strong></h2>
+          <p>Ative as melhores ofertas e descubra novos produtos toda semana.</p>
+          <button id="offersButton" class="primary" type="button">Aproveitar agora →</button>
+        </div>
+        <div class="promo-badge"><b>30%</b><span>OFF</span></div>
+      </section>
+
+      <section id="suporte" class="section support-section">
+        <div class="support-hero-card">
+          <div>
+            <span class="eyebrow">CENTRAL DE SUPORTE</span>
+            <h2>Precisa de ajuda?</h2>
+            <p>Abra um atendimento e converse diretamente com a equipe do Mercado RC. Neste início, o atendimento funciona exclusivamente por chat.</p>
+            <div class="support-actions">
+              <button id="openSupportButton" class="support-primary" type="button">💬 Abrir atendimento</button>
+              <button id="mySupportButton" class="support-secondary" type="button">Meus atendimentos</button>
+            </div>
+          </div>
+          <div class="support-status-card">
+            <span class="support-live-dot"></span>
+            <strong>Atendimento por chat</strong>
+            <small>Equipe RC online para receber sua solicitação</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" class="section about">
+        <span class="eyebrow">POR QUE MERCADO RC?</span>
+        <h2>Uma loja feita para quem joga.</h2>
+        <div class="features">
+          <article><i>01</i><h3>Catálogo gamer</h3><p>Produtos digitais e físicos organizados por jogo e categoria.</p></article>
+          <article><i>02</i><h3>Compra segura</h3><p>O checkout exige cadastro e dados necessários para a entrega.</p></article>
+          <article><i>03</i><h3>Conta RC</h3><p>Tenha seus dados, pedidos e contas conectadas organizados no perfil.</p></article>
+        </div>
+      </section>
+
+      <footer>
+        <div class="logo"><span class="logo-mark">♛</span> MERCADO<span class="logo-rc">RC</span></div>
+        <div class="footer-socials" id="footerOfficialLinks"></div>
+        <p>© 2026 Mercado RC. Projeto demonstrativo.</p>
+        <span>PIX • VISA • MASTER • BOLETO</span>
+      </footer>
+    </main>
+
+    <aside class="right-panel">
+      <div class="right-card cart-preview">
+        <div class="right-card-head"><h3>🛒 Meu carrinho</h3><span id="sideCartCount">0 itens</span></div>
+        <div id="sideCartPreview" class="side-cart-preview"><p>Seu carrinho está vazio.</p></div>
+        <div class="side-total"><span>Subtotal</span><strong id="sideCartTotal">R$ 0,00</strong></div>
+        <button class="primary full" type="button" onclick="document.getElementById('cartButton').click()">Finalizar compra</button>
+      </div>
+
+      <div class="right-card coupon-card">
+        <div class="right-card-head"><h3>🎟️ Cupons de desconto</h3></div>
+        <div class="coupon-row"><div><b>RC10</b><span>10% de desconto</span></div><button type="button" id="couponButton">Aplicar</button></div>
+        <div class="coupon-row"><div><b>NEON20</b><span>20% acima de R$100</span></div><button type="button" id="neonCouponButton">Aplicar</button></div>
+      </div>
+
+      <div class="right-card notification-card">
+        <div class="right-card-head"><h3>🔔 Novidades</h3><span>Ao vivo</span></div>
+        <div class="mini-notice"><i>⚡</i><span><b>Pacote Neon disponível!</b><small>Confira as ofertas da semana.</small></span></div>
+        <div class="mini-notice"><i>🛡️</i><span><b>Compra protegida</b><small>Seus dados ficam no seu navegador.</small></span></div>
+        <div class="mini-notice"><i>🎮</i><span><b>Novos itens chegando</b><small>Fique de olho no catálogo.</small></span></div>
+      </div>
+
+      <div class="right-card official-links-card">
+        <div class="right-card-head"><h3>🌐 Links oficiais</h3><span>RC</span></div>
+        <div id="officialLinks" class="official-links"><span class="official-empty">Carregando links oficiais...</span></div>
+      </div>
+
+      <div class="right-card quick-card">
+        <div class="right-card-head"><h3>⚡ Acesso rápido</h3></div>
+        <div class="quick-grid">
+          <button type="button" onclick="document.getElementById('loginButton').click()">◉<span>Perfil</span></button>
+          <button type="button" id="quickOrders">☷<span>Pedidos</span></button>
+          <button type="button" onclick="document.getElementById('jogos').scrollIntoView({behavior:'smooth'})">♡<span>Favoritos</span></button>
+          <button type="button" id="supportQuickButton">◌<span>Suporte</span></button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <button id="closeModal" class="close" type="button">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <aside id="cartPanel" class="drawer">
+    <div class="drawer-head"><h2>Seu carrinho</h2><button id="closeCart" type="button">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+    <button id="checkoutButton" class="primary full" type="button">Finalizar compra</button>
+  </aside>
+  <div id="overlay" class="overlay hidden"></div>
+
+  <div id="notification" class="notification">
+    <div class="notification-icon">✓</div>
+    <div class="notification-content">
+      <strong id="notificationTitle">Sucesso</strong>
+      <p id="notificationMessage">Tudo certo.</p>
+    </div>
+    <button id="closeNotification" class="notification-close" type="button">×</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
